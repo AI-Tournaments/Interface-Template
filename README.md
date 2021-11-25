@@ -5,3 +5,4 @@
 - Call `window.opener.postMessage(/*Replace with your response*/, '*')` whenever after reception of a `messageEvent.data.type === 'Post'`. You can only respond once per `Post`, other responses in between will be dropped.
 - The main difference between an interface and `participant.js` is that interfaces is not sandboxed (limited or restricted) like participants. The main use case for interfaces is to debug or train participants, but interfaces can be used as an human interface to allow unranked human vs machine or human vs human matches.
 - Add topic `AI-Tournaments-Interface` to make it discoverable.
+- Activate `GitHub Pages`.
