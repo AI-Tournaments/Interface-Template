@@ -42,7 +42,10 @@
 			function respond(response){
 				if(!responseLock.classList.contains('engaged')){
 					responseLock.classList.add('engaged');
-					window.opener.postMessage(response, '*');
+					window.opener.postMessage({
+						value: response,
+						executionSteps: {toRespond: 0, toTerminate: 0} // Optional by the arena.
+					}, '*');
 				}
 			}
 		</script>
