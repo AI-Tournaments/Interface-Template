@@ -30,11 +30,11 @@
 				responseLock = document.getElementById('lock');
 				let _init;
 				window.addEventListener('message', messageEvent => {
-					if(messageEvent.data.type === 'Post'){
+					if(!_init){
+						_init = messageEvent.data;
+					}else if(messageEvent.data.type === 'Post'){
 						responseLock.classList.remove('engaged');
 						respond('YOUR_RESPONSE');
-					}else if(!_init){
-						_init = messageEvent.data;
 					}
 				});
 				window.opener.postMessage(null, '*');
