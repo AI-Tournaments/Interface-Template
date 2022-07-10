@@ -37,7 +37,7 @@
 						respond('YOUR_RESPONSE');
 					}
 				});
-				window.opener.postMessage(null, '*');
+				window.opener.postMessage({keepOpenAfterTermination: false}, '*');
 			}
 			function respond(response){
 				if(!responseLock.classList.contains('engaged')){
